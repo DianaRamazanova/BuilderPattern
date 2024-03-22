@@ -10,13 +10,13 @@ List<Student> students = new()
     new Student { Name = "Maksim", Surname = "V.", Topic = "Kotik", Mark = 3 }
 };
 
-var builder = new StudentCourseworkBuilder(students);
+var builder = new ReportOfStudentCourseworkBuilder(students);
 
-var director = new StudentCourseworkDirector(builder);
+var director = new ReportOfStudentCourseworkDirector(builder);
 
 director.Build();
 
-var document = builder.GetStudentCoursework();
+var document = builder.GetReportOfStudentCoursework();
 
 Console.WriteLine(document);
 

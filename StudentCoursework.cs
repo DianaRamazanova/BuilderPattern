@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuilderPattern
 {
-    public class StudentCoursework
+    public class ReportOfStudentCoursework
     {
         public string Group { get; set; }
 

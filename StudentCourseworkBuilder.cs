@@ -6,38 +6,38 @@ using System.Threading.Tasks;
 
 namespace BuilderPattern
 {
-    public class StudentCourseworkBuilder : IStudentCourseworkBuilder
+    public class ReportOfStudentCourseworkBuilder : IReportOfStudentCourseworkBuilder
     {
-        private StudentCoursework _studentCoursework;
+        private ReportOfStudentCoursework _reportOfStudentCoursework;
 
         private readonly IEnumerable<Student> _students;
 
-        public StudentCourseworkBuilder(IEnumerable<Student> students)
+        public ReportOfStudentCourseworkBuilder(IEnumerable<Student> students)
         {
             _students = students;
-            _studentCoursework = new();
+            _reportOfStudentCoursework = new();
         }
 
-        public void BuildGroup() //  public IStudentCourseworkBuilder BuildGroup()
+        public void BuildGroup() //  public IReportOfStudentCourseworkBuilder BuildGroup()
         {
 
-            _studentCoursework.Group =
+            _reportOfStudentCoursework.Group =
                 $"Student's group: Mosip12/21b\n Course: 3\n Profil': System and Internet-programming\n Direction: Matobes\n Faculty:HSCM&S\n Subject:C#";
 
-            _studentCoursework.Group +=
+            _reportOfStudentCoursework.Group +=
                 "\n----------------------------------------------------------------------------------------------------\n";
 
             // return this;
         }
 
-        public void BuildAbout() //public IStudentCourseworkBuilder BuildMark()  студент, тема и оценка
+        public void BuildAbout() //public IReportOfStudentCourseworkBuilder BuildMark()  студент, тема и оценка
         {
-            _studentCoursework.About =
+            _reportOfStudentCoursework.About =
                 string.Join(Environment.NewLine,
                     _students.Select(e =>
                     $"Student: {e.Name}\t {e.Surname}\t\t | Topic: {e.Topic}\t\t\t  | Mark: {e.Mark}\n "));
 
-            _studentCoursework.About +=
+            _reportOfStudentCoursework.About +=
                 "\n----------------------------------------------------------------------------------------------------\n";
 
             //  return this;
@@ -45,22 +45,21 @@ namespace BuilderPattern
 
         public void BuildReport()
         {
-            _studentCoursework.Report =
+            _reportOfStudentCoursework.Report =
                $"REPORT ON DATE: {DateTime.Now}\n";
 
-            _studentCoursework.Report +=
+            _reportOfStudentCoursework.Report +=
                $"Prepod: Chapkin\n";
 
         }
-        // средний балл за оценку
 
-        public StudentCoursework GetStudentCoursework()
+        public ReportOfStudentCoursework GetReportOfStudentCoursework()
         {
-            StudentCoursework studentCoursework = _studentCoursework;
+            ReportOfStudentCoursework reportOfStudentCoursework = _reportOfStudentCoursework;
 
-            _studentCoursework = new();
+            _reportOfStudentCoursework = new();
 
-            return studentCoursework;
+            return reportOfStudentCoursework;
         }
     }
 

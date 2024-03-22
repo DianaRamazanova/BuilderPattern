@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BuilderPattern
 {
-    public class StudentCourseworkDirector
+    public class ReportOfStudentCourseworkDirector
     {
-        private readonly IStudentCourseworkBuilder _builder;
+        private readonly IReportOfStudentCourseworkBuilder _builder;
 
-        public StudentCourseworkDirector(IStudentCourseworkBuilder builder)
+        public ReportOfStudentCourseworkDirector(IReportOfStudentCourseworkBuilder builder)
         {
             _builder = builder;
         }

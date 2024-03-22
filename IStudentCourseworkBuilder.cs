@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BuilderPattern
 {
-    public interface IStudentCourseworkBuilder
+    public interface IReportOfStudentCourseworkBuilder
     {
-        void BuildGroup(); //IStudentCourseworkBuilder BuildGroup();
+        void BuildGroup(); //IReportOfStudentCourseworkBuilder BuildGroup();
 
-        void BuildAbout(); // IStudentCourseworkBuilder BuildAbout();
+        void BuildAbout(); // IReportOfStudentCourseworkBuilder BuildAbout();
 
-        void BuildReport(); // IStudentCourseworkBuilder BuildReport();
+        void BuildReport(); // IReportOfStudentCourseworkBuilder BuildReport();
 
 
-        StudentCoursework GetStudentCoursework();
+        ReportOfStudentCoursework GetReportOfStudentCoursework();
     }
 }
