@@ -20,8 +20,9 @@ namespace BuilderPattern
 
         public void BuildGroup() //  public IStudentCourseworkBuilder BuildGroup()
         {
+
             _studentCoursework.Group =
-                $"Student's group: Mosip12/21b\n";
+                $"Student's group: Mosip12/21b\n Course: 3\n Profil': System and Internet-programming\n Direction: Matobes\n Faculty:HSCM&S\n Subject:C#";
 
             _studentCoursework.Group +=
                 "\n----------------------------------------------------------------------------------------------------\n";
@@ -34,11 +35,23 @@ namespace BuilderPattern
             _studentCoursework.About =
                 string.Join(Environment.NewLine,
                     _students.Select(e =>
-                    $"Student: {e.Name}\t\t Surname: {e.Surname}\t\t Topic: {e.Topic}\t\t Mark: {e.Mark}"));
+                    $"Student: {e.Name}\t {e.Surname}\t\t | Topic: {e.Topic}\t\t\t  | Mark: {e.Mark}\n "));
+
+            _studentCoursework.About +=
+                "\n----------------------------------------------------------------------------------------------------\n";
 
             //  return this;
         }
 
+        public void BuildReport()
+        {
+            _studentCoursework.Report =
+               $"REPORT ON DATE: {DateTime.Now}\n";
+
+            _studentCoursework.Report +=
+               $"Prepod: Chapkin\n";
+
+        }
         // средний балл за оценку
 
         public StudentCoursework GetStudentCoursework()

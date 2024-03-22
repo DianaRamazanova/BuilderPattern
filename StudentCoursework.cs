@@ -12,10 +12,12 @@ namespace BuilderPattern
 
         public string About { get; set; }
 
+        public string Report { get; set; }
         public override string ToString() =>
             new StringBuilder()
             .Append(Group)
             .Append(About)
+            .Append(Report)
             .ToString();
     }
 }

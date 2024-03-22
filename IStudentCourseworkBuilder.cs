@@ -12,6 +12,9 @@ namespace BuilderPattern
 
         void BuildAbout(); // IStudentCourseworkBuilder BuildAbout();
 
+        void BuildReport(); // IStudentCourseworkBuilder BuildReport();
+
+
         StudentCoursework GetStudentCoursework();
     }
 }

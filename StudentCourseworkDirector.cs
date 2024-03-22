@@ -19,6 +19,7 @@ namespace BuilderPattern
         {
             _builder.BuildGroup();
             _builder.BuildAbout();
+            _builder.BuildReport();
 
             /* _builder
                       .BuildGroup();
